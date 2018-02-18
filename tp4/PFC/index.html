@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous">
+		</script>	  
+		<script src='./js/pfc.js'></script>
+	</head>
+	<body container>
+		<h3 class="_bb1">Pierre, Feuille, Ciseaux</h3>
+		<div grid="">
+			<div id="coups" column="4" class="_mts _br1 _text-center">
+				<h4>Choississez votre coup</h4>
+				<img class=" _mxs" id="feuille"  src="./images/feuille.png" alt="feuille">
+				<img  class="_mxs" id="ciseaux"  src="./images/ciseaux.png" alt="ciseaux">
+				<img   class="_mxs" id="pierre"  src="./images/pierre.png" alt="pierre">
+
+				<div id="partie">
+
+					<h5>Parties : 0</h5>
+				</div>
+				<div id="gagne">
+					<h5>Gagnées : 0 </h5>
+				</div>
+				<div>
+					<button id="new" class="btn btn-success">Recommencer</button>
+				</div>
+
+			</div>
+			<div column="8">
+				<div grid>
+					<div id="joueur" column="5">
+						<h4>Vous</h4>
+						<hr>
+						<img src=''>
+					</div>
+
+					<div column="2">
+						<div id="working" class="spinner"></div>
+					</div>
+					<div id="ordinateur" column="5">
+						<h4>Ordinateur</h4>
+						<hr>
+						<img src=''>
+					</div>
+				</div>
+				<div class="_mts" id="message">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

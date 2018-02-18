@@ -1,0 +1,15 @@
+#ct {
+	width:100%;
+}
+#ct tbody{
+	cursor:pointer;
+}
+#ct td{
+	width:33%;
+
+}
+#ct tbody tr:hover{
+	background-color:#eeeeee;
+
+}
+

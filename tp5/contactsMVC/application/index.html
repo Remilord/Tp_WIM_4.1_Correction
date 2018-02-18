@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>tp dom</title>
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+		<link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>	 
+
+</head>
+<body container="small">
+
+	<div class="_abs spinner" id="working" ></div>
+	<h1 class="_bb1 _mbs">MVC javascript et service REST</h1>
+	<div grid>
+		<div column="8">
+
+			<h4 class="_bb1">Liste des contacts
+			</h4>
+			<table id="ct">
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Prénom</th>
+						<th>Email</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div column="4">
+			<h4 class="_bb1" >Contact</h4>
+			<form id="form">
+				<fieldset>
+					<div>
+						<label  for="prenom">Prénom</label>
+						<input id="prenom" name="prenom" placeholder="Prénom"  type="text" required>
+					</div>
+
+					<!-- Text input-->
+					<div>
+						<label  for="nom">Nom</label>
+						<input id="nom" name="nom" placeholder="Nom"  type="text" required>
+					</div>
+
+					<!-- Text input-->
+					<div>
+						<label  for="email">Email</label>
+						<input id="email" name="email" placeholder="Email"  type="email" required>
+					</div>
+
+					<!-- Button -->
+					<div class="_mts">
+						<button class='-success' id="ajouter" ><i class='fa fa-plus'></i></button>
+						<button class="-warning" id="editer" disabled><i class='fa fa-edit'></i></button>
+						<button class="-error" id="supprimer" disabled><i class='fa fa-trash'></i></button>
+					</div>
+
+				</fieldset>
+			</form>
+
+		</div>
+	</div>
+	<script src="./js/model.js"></script>
+	<script src="./js/view.js"></script>
+	<script src="./js/controller.js"></script>
+	<script>
+		var model=$.Contact;
+var view=new $.View();
+var controller=new $.Controller(view,model);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- a vous ! je vais pas tout faire !!!! -->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+		<script src="./js/iban.js"></script>
+
+		<title>Iban en js</title>
+	</head>
+	<h1>Entrez votre numéro d'IBAN :</h1>
+	<body container="small" class="_mts" onLoad="Iban.Init()">
+    <form action="">
+      <table>
+        <tr>
+    <td>  <input type="text" onkeypress="Iban.Verify()" /></td>
+      <td>  <input type="text" onkeypress="Iban.Verify()" /> </td>
+      <td>  <input type="text"  onkeypress="Iban.Verify()" /> </td>
+      <td>  <input type="text"   onkeypress="Iban.Verify()" /> </td>
+        <td>  <input type="text"  onkeypress="Iban.Verify()"  /> </td>
+    <td>  <input type="text" onkeypress="Iban.Verify()" /> </td>
+      <td>  <input type="text"  onkeypress="Iban.Verify()"  /> </td>
+      </tr>
+      <tr>
+        <td>
+        <button type="button" id="valider">Valider</button>
+      </td>
+      </tr>
+      </table>
+    </form>
+		<script>
+
+		</script>
+	</body>
+</html>

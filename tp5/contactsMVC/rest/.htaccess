@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# À modifier avec votre URL !
+
+RewriteBase /~denis/rest
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

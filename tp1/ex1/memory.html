@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="./js/memory.js"></script>
+
+		<title>Memory</title>
+	</head>
+
+	<body container="small">
+		<h1 class="_bb1">Memory</h1>
+		<div grid="strech top" class="_mts">
+			<div column>
+
+				<div grid="center" class="_mts">
+					<div column class="_text-center">
+						<img  src="./images/off.png" alt="" />
+						<img  src="./images/off.png" alt="" />
+						<img  src="./images/off.png" alt="" />
+					</div>
+					<div column class="_text-center">
+						<img  src="./images/off.png" alt="" />
+						<img  src="./images/off.png" alt="" />
+						<img  src="./images/off.png" alt="" />
+					</div>
+					<div column class="_text-center">
+						<img  src="./images/off.png" alt="" />
+						<img  src="./images/off.png" alt="" />
+						<img  src="./images/off.png" alt="" />
+					</div>
+
+				</div>
+				<div grid class="_mts">
+					<div column="4 +4">
+						<button onclick="Memory.Jouer()">COMMENCER</button>
+					</div>
+				</div>
+			</div>
+
+			<div column>
+				<h3>Règles</h3>
+				<p>
+					Pendant une seconde, vous verrez l'état de l'ensemble 
+					des ampoules, puis elles seront éteintes. Vous devrez 
+					alors cliquer sur celles qui étaient allumées.
+				</p> 
+			</p>
+			<section id="perdu" class="alert-box -error">
+				<p>Perdu ! </p>
+			</section>
+			<section id="gagne" class="alert-box -success">
+				<p>Gagné ! </p>
+			</section>
+
+		</div>
+	</div>
+</body>
+</html>

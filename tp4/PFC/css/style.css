@@ -1,0 +1,11 @@
+#joueur img, #ordinateur img{
+height:200px;
+}
+img:hover{
+
+cursor:pointer;
+}
+#spinner.working{
+display:none
+
+}

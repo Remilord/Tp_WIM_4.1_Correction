@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+		<script src="./js/tooltip.js"></script>
+		<style>
+			.tooltip {
+				position:absolute;
+				padding:10px;
+				display:none;
+			}
+		</style>
+	</head>
+	<body container="small">
+		<h1 class="_bb1">Tooltip</h1>
+		<p>Pour les éléments qui possédent l'attribut <span class="tag-box -success">data-tooltip</span>, une
+			bulle avec son contenu est affichée et suit le pointeur dans l'élément.</p>
+		Un tableau :
+		<table>
+			<thead>
+				<th>
+					<td>Col1</td>
+					<td>Col2</td></th>
+			</thead>
+			<tbdoy>
+				<tr>
+					<td><span  data-tooltip="denis">titi</span></td>
+					<td><span data-tooltip="michel">michel</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		Un lien : <a href="http://www.google.fr" data-tooltip="moteur de recherche">GOOGLE</a><br>
+		Une image : <img data-tooltip="image !!!!!" width=200px height=200px src="./img/lena.png" />
+
+	</body>
+</html>

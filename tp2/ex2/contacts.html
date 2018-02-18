@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>tp dom</title>
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+		<link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+		<script src="./js/contacts.js"></script>
+		<style>
+			#contacts {
+				width:100%;
+			}
+			#contacts tbody{
+				cursor:pointer;
+			}
+			#contacts td{
+				width:33%;
+
+			}
+		</style>
+		<script>
+		</script>
+	</head>
+	<body container="small">
+
+		<h1 class="_bb1 _mbs">TP DOM</h1>
+		<div grid>
+			<div column="8">
+				<h4 class="_bb1">Contacts
+				</h4>
+				<table id="contacts">
+					<thead>
+						<tr>
+							<th>Nom</th>
+							<th>Prénom</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td>Monnerat</td>
+						<td>Denis</td>
+						<td>monnerat@u-pec.fr</td>
+					</tr>
+					<tr>
+						<td>Valarcher</td>
+						<td>Pierre</td>
+						<td>valarcher@u-pec.fr</td>
+					</tr>
+					<tr>
+						<td>Hernandez</td>
+						<td>Luc</td>
+						<td>hernandez@u-pec.fr</td>
+						</tr>
+					</tbody>
+				</table>
+				<button id="sauver">Sauver</button>
+			</div>
+			<div column="4">
+				<h4 class="_bb1" >Saisie</h4>
+				<form id="form">
+					<fieldset>
+						<div>
+							<label  for="prenom">Prénom</label>
+							<input id="prenom" name="prenom" placeholder="Prénom"  type="text" required>
+						</div>
+
+						<!-- Text input-->
+						<div>
+							<label  for="nom">Nom</label>
+							<input id="nom" name="nom" placeholder="Nom"  type="text" required>
+						</div>
+
+						<!-- Text input-->
+						<div>
+							<label  for="email">Email</label>
+							<input id="email" name="email" placeholder="Email"  type="email" required>
+						</div>
+
+						<!-- Button -->
+						<div class="_mts">
+							<button id="ajouter" >Ajouter</button>
+						</div>
+
+					</fieldset>
+				</form>
+				<div class="alert-box ">Cliquez sur une ligne pour la supprimer.</div>
+			</div>
+		</div>
+	</body>
+</html>
