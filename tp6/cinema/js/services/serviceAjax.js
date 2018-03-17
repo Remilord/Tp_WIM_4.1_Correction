@@ -22,7 +22,7 @@ angular.module('exoCinema')
 					method : "GET",
 					url : url				
 				}
-			);
+			).then(function(data){return data.data;});
 
 		}
 

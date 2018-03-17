@@ -1,4 +1,13 @@
-div{
+.divuser{
 flex-wrap:wrap;
+border: 1px solid gray;
+}
+img {
+	display:inline-block;
+}
+.location {
+	font-style: italic;
+	color:gray;
+	font-size: 15px;
 }
 

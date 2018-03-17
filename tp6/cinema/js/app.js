@@ -7,7 +7,7 @@ angular
 	.config(function ($routeProvider,$locationProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'views/default.html',
+				templateUrl: 'views/main.html',
 				controller: 'defaultCtrl as cinema'
 			})
 			.otherwise({

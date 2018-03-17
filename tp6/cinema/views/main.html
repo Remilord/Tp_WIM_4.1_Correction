@@ -1,0 +1,72 @@
+
+<!-- le formulaire de recherche de films -->
+
+<div grid="bottom" class="">
+	<div column="4">
+		<form>Grand <input  ng-value="6"  type="radio" ng-model="cinema.size"> Moyen <input  ng-value="4"  type="radio" ng-model="cinema.size"> Petit <input  ng-model="cinema.size" type="radio" name="Size" ng-value="3"></form>
+	</div>
+
+	<div column="+4 4">
+		<form  class="_text-right">
+			<input   style="width:auto" type="text"><button><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+</div>
+
+<!-- La barre de navigation avec les différents types de recherche de films -->
+
+<div class="_mtxs" grid="justify-around">
+	<button  ng-repeat="t in cinema.types" column="2" ng-class="">
+		{{t.label}}
+	</button> 
+</div>
+<div grid="justify-between" class="_mtxs">
+	
+<!-- Tri par note  -->
+	<div column class="_text-left">
+		Notes 
+		<a  href="" ><i class="fa fa-caret-down"></i></a> 
+		<a  href="" ><i class="fa fa-caret-up"></i></a> 
+
+	</div>
+
+<!-- Pagination de l'affichage de la liste de films -->
+
+<div column class="_text-center _ts3"> 
+		<a  href="" ng-click="cinema.decPage()"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+		{{cinema.currentPage}} / {{cinema.totalPages}} 
+		<a  href="" ng-click="cinema.incPage()"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+	</div>
+
+<!-- Tri par titre  -->
+	<div column class="_text-right">
+		Titres 
+		<a   href="" ><i class="fa fa-caret-down"></i></a> 
+		<a  href="" ><i class="fa fa-caret-up"></i></a> 
+
+	</div>
+</div>
+
+<!-- Grille d'affichage de la page courante de la liste de films -->
+
+<div loading="loading">
+	<div grid="top" class="">
+		<div ng-repeat="film in cinema.films" column="3" class="_ps">
+			<div class="card-box _text-center">
+				<img 
+				class="image" ng-hide="!film.poster_path" 
+				src="http://image.tmdb.org/t/p/w342/{{film.poster_path}}">
+				<div class="card-content">
+					<h5 class="title">{{film.title}}</h5>
+					<jk-rating-stars style="float:left" max-rating="10" rating="film.vote_average" read-only="true" >
+					</jk-rating-stars>		
+					<span style="float:right" >({{film.vote_count}} avis)</span>
+					{{film.release_date | date: 'yyyy'}}
+					<!--p class="content">
+					{{film.overview}}
+					</p-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
