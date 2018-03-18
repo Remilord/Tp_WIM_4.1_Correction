@@ -12,3 +12,6 @@ width:auto;
 input + button{
 display:inline;
 }*/
+.selected-type {
+	border: solid 1px black;
+}

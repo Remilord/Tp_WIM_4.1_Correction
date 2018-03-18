@@ -16,4 +16,3 @@ angular
 		$locationProvider.hashPrefix('');
 		/*	  .html5Mode(true);*/
 	});
-

@@ -1,7 +1,7 @@
 <section class="alert-box -success _mts _mbs">
 	<p class="_text-center">
 		Cette  application  utilise <a href="https://angularjs.org/">AngularJS</a> et l'api de données
-		<a href="https://www.themoviedb.org/?language=fr/">Movie DB</a>. 
+		<a href="https://www.themoviedb.org/?language=fr/">Movie DB</a>.
 	</p>
 </section>
 
@@ -24,31 +24,31 @@
 <div class="_mtxs" grid="justify-around">
 	<button  ng-repeat="t in cinema.types" column="2" ng-class="">
 		{{t.label}}
-	</button> 
+	</button>
 </div>
 <div grid="justify-between" class="_mtxs">
-	
+
 <!-- Tri par note  -->
 	<div column class="_text-left">
-		Notes 
-		<a  href="" ><i class="fa fa-caret-down"></i></a> 
-		<a  href="" ><i class="fa fa-caret-up"></i></a> 
+		Notes
+		<a  href="" ><i class="fa fa-caret-down"></i></a>
+		<a  href="" ><i class="fa fa-caret-up"></i></a>
 
 	</div>
 
 <!-- Pagination de l'affichage de la liste de films -->
 
-<div column class="_text-center _ts3"> 
+<div column class="_text-center _ts3">
 		<a  href="" ng-click="cinema.decPage()"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-		{{cinema.currentPage}} / {{cinema.totalPages}} 
+		{{cinema.currentPage}} / {{cinema.totalPages}}
 		<a  href="" ng-click="cinema.incPage()"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 	</div>
 
 <!-- Tri par titre  -->
 	<div column class="_text-right">
-		Titres 
-		<a   href="" ><i class="fa fa-caret-down"></i></a> 
-		<a  href="" ><i class="fa fa-caret-up"></i></a> 
+		Titres
+		<a   href="" ><i class="fa fa-caret-down"></i></a>
+		<a  href="" ><i class="fa fa-caret-up"></i></a>
 
 	</div>
 </div>
@@ -59,13 +59,13 @@
 	<div grid="top" class="">
 		<div ng-repeat="film in cinema.films" column="3" class="_ps">
 			<div class="card-box _text-center">
-				<img 
-				class="image" ng-hide="!film.poster_path" 
+				<img
+				class="image" ng-hide="!film.poster_path"
 				src="http://image.tmdb.org/t/p/w342/{{film.poster_path}}">
 				<div class="card-content">
 					<h5 class="title">{{film.title}}</h5>
 					<jk-rating-stars style="float:left" max-rating="10" rating="film.vote_average" read-only="true" >
-					</jk-rating-stars>		
+					</jk-rating-stars>
 					<span style="float:right" >({{film.vote_count}} avis)</span>
 					{{film.release_date | date: 'yyyy'}}
 					<!--p class="content">
