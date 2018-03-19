@@ -9,6 +9,9 @@ angular
 			.when('/', {
 				templateUrl: 'views/main.html',
 				controller: 'defaultCtrl as cinema'
+			}).when('/fiche', {
+				templateUrl : 'views/fiche.html',
+				controller: 'ficheCtrl as fiche'
 			})
 			.otherwise({
 				redirectTo: '/'

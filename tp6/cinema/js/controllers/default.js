@@ -1,5 +1,5 @@
 angular.module('exoCinema')
-	.controller('defaultCtrl', function ( $scope,DEFAULT_MOVIE_TYPE,MOVIE_TYPES,$routeParams,serviceAjax) {
+	.controller('defaultCtrl', function ( $scope,$location,DEFAULT_MOVIE_TYPE,MOVIE_TYPES,$routeParams,serviceAjax,store) {
 
 		this.films = [];
 		this.currentPage=1;
@@ -12,13 +12,15 @@ angular.module('exoCinema')
 		this.types = MOVIE_TYPES;
 		this.size = "w342";
 		this.columnsize = 3;
+		
 		 var self = this;
-				this.getMovies = function(){
+		this.getMovies = function(){
 			this.loading=true;
-					var self = this;
+			var self = this;
 			serviceAjax
 				.getListMovies(this.currentPage,this.type,this.querySearch)
 				.then(function(data){
+					console.log(data);
 					self.currentPage=data.page;
 					self.films=data.results;
 					self.totalPages=data.total_pages;
@@ -86,7 +88,9 @@ angular.module('exoCinema')
 		self.type= type;
 		self.querySearch = null;
 		}
-
-		this
-			.getMovies();
+		this.goToFiche = function(id) {
+			store.store("theid",id.split(':')[1]);
+			$location.path('/fiche');
+		}
+		this.getMovies();
 	})

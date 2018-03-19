@@ -16,7 +16,7 @@
 <!-- La barre de navigation avec les différents types de recherche de films -->
 
 <div class="_mtxs" grid="justify-around">
-	<button  ng-repeat="t in cinema.types" column="2" ng-class="" ng-click="cinema.changeType(t.name)">
+	<button  ng-repeat="t in cinema.types" column="2" ng-class="" ng-style="cinema.type == t.name && {'background-color': '#FFA07A'} " ng-click="cinema.changeType(t.name)">
 		{{t.label}}
 	</button>
 </div>
@@ -54,7 +54,7 @@
 		<div ng-repeat="film in cinema.films | orderBy : cinema.tri : reverse = cinema.order " column="{{cinema.columnsize}}" class="_ps">
 			<div class="card-box _text-center">
 				<img
-				class="image" ng-hide="!film.poster_path"
+				class="image" ng-hide="!film.poster_path" ng-click="cinema.goToFiche(film.$$hashKey)"
 				src="http://image.tmdb.org/t/p/{{cinema.size}}/{{film.poster_path}}">
 				<div class="card-content">
 					<h5 class="title">{{film.title}}</h5>
