@@ -9,7 +9,7 @@ angular
 			.when('/', {
 				templateUrl: 'views/main.html',
 				controller: 'defaultCtrl as cinema'
-			}).when('/fiche', {
+			}).when('/fiche/:idfilm', {
 				templateUrl : 'views/fiche.html',
 				controller: 'ficheCtrl as fiche'
 			})

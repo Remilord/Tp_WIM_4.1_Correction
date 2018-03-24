@@ -12,7 +12,7 @@ angular.module('exoCinema')
 		this.types = MOVIE_TYPES;
 		this.size = "w342";
 		this.columnsize = 3;
-		
+
 		 var self = this;
 		this.getMovies = function(){
 			this.loading=true;
@@ -89,8 +89,8 @@ angular.module('exoCinema')
 		self.querySearch = null;
 		}
 		this.goToFiche = function(id) {
-			store.store("theid",id.split(':')[1]);
-			$location.path('/fiche');
+			var trueid = id.split(':')[1];
+			$location.path('/fiche/'+trueid);
 		}
 		this.getMovies();
 	})

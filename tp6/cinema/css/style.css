@@ -15,3 +15,7 @@ display:inline;
 .selected-type {
 	border: solid 1px black;
 }
+h6 {
+	font-style: italic;
+	color: gray;
+}

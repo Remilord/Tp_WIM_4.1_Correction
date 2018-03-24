@@ -1,1 +1,13 @@
-{{fiche.id}}
+<div loading="loading">
+<div class="card-box _text-center">
+<div>
+  <img class="image" src ="http://image.tmdb.org/t/p/w500{{fiche.details.poster_path}}" />
+  <h1 class="title" ng-bind="fiche.details.title"></h1><h5 ng-bind="fiche.details.tagline"></h5>
+  <h6 class="title" ng-bind="fiche.details.original_title"></h1>
+    <p ng-bind="fiche.details.overview">  </p>
+    <h5 ng-bind="fiche.details.release_date"></h5>
+    <h6>Runtime :</h6> <h6 ng-bind="fiche.details.runtime"></h6>
+    <button ng-click="fiche.back()">Retour à la page d'accueil</button>
+</div>
+</div>
+</div>
